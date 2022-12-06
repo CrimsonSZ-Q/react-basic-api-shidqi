@@ -1,0 +1,38 @@
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+
+  
+  }
+  @media screen and (max-width: 1040px) {
+    .content-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .content-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media print {
+    .content-container {
+      display: none;
+    }
+  }
+  
+
+  .h1-wrapper{
+    color: white;
+    text-align: left;
+    border-top: 2px solid rgb(113, 145, 171);
+    background-color: steelblue;
+    margin-bottom: 10px;
+    margin-top: 0;
+ }
+.container {
+  background-color: white;
+
+}

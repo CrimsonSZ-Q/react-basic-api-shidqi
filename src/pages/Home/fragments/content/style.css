@@ -1,0 +1,66 @@
+
+
+ .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: azure;
+
+
+  
+ }
+
+ .card > img{
+   width: 30%;
+ }
+ .card p {
+   color: var(--soft-color);
+ }
+ .card h4,
+ p {
+   margin: 0.5rem auto;
+ }
+ .card h2 {
+   text-decoration: underline;
+ }
+ .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+   transform: scale(1.01);
+   position: static;
+   z-index: 0;
+ }
+ .card-price-add {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ .add-item-btn,
+ .remove-item-btn {
+   width: fit-content;
+   padding: 0.5rem 1rem;
+   display: block;
+   font-size: 1rem;
+   background-color: var(--color-white);
+   color: var(--color-primary);
+   border: 2px solid var(--color-primary);
+   border-radius: 0.5rem;
+   cursor: pointer;
+ }
+ .remove-item-btn {
+   border-color: var(--color-danger);
+   color: var(--color-danger);
+ }
+ .add-item-btn:hover {
+   background-color: var(--color-primary);
+   color: var(--color-white);
+ }
+ .remove-item-btn:hover {
+   background-color: var(--color-danger);
+   color: var(--color-white);
+ }
+ 
+

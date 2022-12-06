@@ -1,0 +1,14 @@
+.category__container {
+display: block;
+  width: 293px;
+  position: absolute;
+  bottom: 490px;
+  right: 3px;
+  color: white;
+
+}
+
+.category__container > select {
+  margin-left: 10px;
+  padding: 3px;
+}
