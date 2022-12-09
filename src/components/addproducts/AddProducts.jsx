@@ -13,10 +13,9 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
 
   const showDivRef = useRef(null);
 
-  function checkoutSucces(ev) {
-  alert("Sukses Checkout")   
-  ev.preventDefault();
-  }
+  function checkoutSucces() {
+ return alert("Barang diCheckout");
+  };
 
   return (
     <div ref={showDivRef} className="addproducts__container">
@@ -94,7 +93,7 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
             <button type="submit"
               className="check-out-btn"
               onClick={() => {
-                items.length >= 1 && {checkoutSucces} && print();
+                items.length >= 1 && checkoutSucces() && print();
               }}
             >
               Check Out

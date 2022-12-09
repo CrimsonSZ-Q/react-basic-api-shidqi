@@ -19,6 +19,7 @@ function App() {
   const [addedItems, setAddedItem] = useState([]);
   const [showAddProducts, setShowAddProducts] = useState(false);
   const [searchCategory, setSearchCategory] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/categories")
@@ -26,7 +27,11 @@ function App() {
       .then((data) => setSearchCategory(data));
   }, []);
   
- 
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products/categories")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/")
@@ -44,8 +49,8 @@ function App() {
     setSearchCategory(e.target.value);
 }
 
-const itemsCategory = items.filter((item) =>
-item.category.includes(searchCategory)
+const itemsCategory = categories.filter((category) =>
+category.includes(searchCategory)
 );
 
   const itmesFilter = items.filter((item) =>
